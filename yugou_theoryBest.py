@@ -23,6 +23,22 @@ user_info['gender'].replace(2.0, np.nan, inplace=True)
 user_info['age_range'].replace(np.nan, -1, inplace=True)
 user_info['gender'].replace(np.nan, -1, inplace=True)
 
+# 检查缺失值
+user_info['gender'].replace(2.0, np.nan, inplace=True)
+missing_values = user_info.isnull().sum()
+print("缺失值统计：")
+print(missing_values)
+
+missing_values = user_log.isnull().sum();
+print(missing_values)
+
+user_log = user_log.fillna(method='ffill')
+
+# 缺失值处理:使用众数填充
+user_info['gender'].replace(2.0, np.nan, inplace=True)
+user_info['age_range'].replace(0.0, np.nan, inplace=True)
+user_info.fillna(user_info.mode(), inplace=True)
+
 # 聚合特征
 seller_group = user_log.groupby(["seller_id", "action_type"]).count()[["user_id"]].reset_index().rename(
     columns={'user_id': 'count'})
@@ -92,7 +108,7 @@ df_train = df_train.fillna(method='ffill')
 # 模型构建与调参
 Y = df_train['label']
 X = df_train.drop(['user_id', 'merchant_id', 'label'], axis=1)
-X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.25, random_state=10)
+X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.20, random_state=10)
 
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, AdaBoostClassifier
 
@@ -158,4 +174,5 @@ for i, predictions in enumerate(predictions_list):
 stacking_predictions = meta_model.predict(stacking_features)
 
 accuracy = accuracy_score(y_test, stacking_predictions)
+print(stacking_predictions[:])
 print(f"Accuracy of Stacking Model on test set: {accuracy:.8f}")
