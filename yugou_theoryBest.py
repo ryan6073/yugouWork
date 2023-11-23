@@ -124,7 +124,7 @@ gbrt_model = GradientBoostingClassifier(random_state=0)
 # 元模型
 meta_model = AdaBoostClassifier(base_estimator=base_classifier, n_estimators=50, learning_rate=0.1, random_state=0)
 # 划分数据集
-X_train_base, X_stack, y_train_base, y_stack = train_test_split(X_train, y_train, test_size=0.2, random_state=0)
+X_train_base, X_stack, y_train_base, y_stack = train_test_split(X_train, y_train, test_size=0.3, random_state=0)
 # 使用基础模型在一部分训练集上训练
 mlp_model.fit(X_train_base, y_train_base)
 logit_model.fit(X_train_base, y_train_base)

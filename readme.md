@@ -27,3 +27,7 @@
 元学习器这里采用毛南设计好的adaboost分类器，通过将第一层基础模型的预测结果作为新的特征矩阵进行训练。
 
 融合模型最终输出的预测结果就是元学习器输出的结果。
+
+效果图：
+
+![image-20231123222727368](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20231123222727368.png)
