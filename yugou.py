@@ -4,6 +4,10 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPClassifier
+
+# 决策树
+from sklearn.tree import DecisionTreeClassifier
+
 plt.rcParams["font.sans-serif"] = "SimHei"  # 解决中文乱码问题
 # 清理内存
 import gc
@@ -102,13 +106,37 @@ Y = df_train['label']
 X = df_train.drop(['user_id', 'merchant_id', 'label'], axis=1)
 X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.25, random_state=10)
 
-
-
-mlp = MLPClassifier(solver='lbfgs', activation='relu', alpha=0.1, random_state=0, hidden_layer_sizes=[10, 10]).fit(
-    X_train, y_train)
-Predict = mlp.predict(X_test)
-Predict_proba = mlp.predict_proba(X_test)
-print(Predict_proba[:])
-Score = accuracy_score(y_test, Predict)
-print(Score)
+# mlp = MLPClassifier(solver='lbfgs', activation='relu', alpha=0.1, random_state=0, hidden_layer_sizes=[10, 10]).fit(
+#     X_train, y_train)
+# Predict = mlp.predict(X_test)
+# Predict_proba = mlp.predict_proba(X_test)
+# print(Predict_proba[:])
+# Score = accuracy_score(y_test, Predict)
+# print(Score)
 # df_train = pd.merge(df_train, browse_days_temp1, on=["user_id", "merchant_id"], how="left")
+# 梯度提升回归树
+# from sklearn.ensemble import GradientBoostingClassifier
+# gbrt = GradientBoostingClassifier(random_state=0)
+# gbrt.fit(X_train, y_train)
+# Predict_proba = gbrt.predict_proba(X_test)
+# print(Predict_proba[:])
+# print("Accuracy on training set: {:.8f}".format(gbrt.score(X_train, y_train)))
+# print("Accuracy on test set: {:.8f}".format(gbrt.score(X_test, y_test)))
+
+# 随机森林
+# from sklearn.ensemble import RandomForestClassifier
+# forest = RandomForestClassifier(n_estimators=10, random_state=2)
+# forest.fit(X_train, y_train)
+# Predict_proba = forest.predict_proba(X_test)
+# print(Predict_proba[:])
+# print("Accuracy on training set: {:.8f}".format(forest.score(X_train, y_train)))
+# print("Accuracy on test set: {:.8f}".format(forest.score(X_test, y_test)))
+
+
+
+tree = DecisionTreeClassifier(max_depth=5, random_state=0)
+tree.fit(X_train, y_train)
+Predict_proba = tree.predict_proba(X_test)
+print(Predict_proba[:])
+print("Accuracy on training set: {:.8f}".format(tree.score(X_train, y_train)))
+print("Accuracy on test set: {:.8f}".format(tree.score(X_test, y_test)))
