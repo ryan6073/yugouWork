@@ -30,16 +30,16 @@
 
 效果图：
 
-![image-20231123222727368](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20231123222727368.png)
+![image-20231124183325080](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20231124183325080.png)
 
 1.4（翟启发）提交第五个版本
 
 ​	这段代码通过梯度提升树（Gradient Boosting Tree）进行分类任务，首先训练了模型并进行特征选择，然后利用网格搜索（Grid Search）调整模型参数以提高预测准确率，并最终评估了模型在测试集上的性能。
 
-![image-20231124013439878](C:\Users\86166\AppData\Roaming\Typora\typora-user-images\image-20231124013439878.png)
+![zhai1](D:\Gitcode\yugouWork\img\zhai1.png)
 
-![image-20231124013455496](C:\Users\86166\AppData\Roaming\Typora\typora-user-images\image-20231124013455496.png)
+![zhai2](D:\Gitcode\yugouWork\img\zhai2.png)
 
-![image-20231124013503127](C:\Users\86166\AppData\Roaming\Typora\typora-user-images\image-20231124013503127.png)
+![zhai3](D:\Gitcode\yugouWork\img\zhai3.png)
 
-![image-20231124013516169](C:\Users\86166\AppData\Roaming\Typora\typora-user-images\image-20231124013516169.png)
+![zhai4](D:\Gitcode\yugouWork\img\zhai4.png)
