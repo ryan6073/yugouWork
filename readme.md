@@ -1,5 +1,5 @@
-1.0:（朱家顺）提交初始版本，提供了完备的特征工程建立，和MLPClassifier分类器，效果图：![效果图](../../桌面/yugouWork/img/initial.png)
-1.1:（张家豪）提交第二个版本，效果图：![效果图](../../桌面/yugouWork/img/zjh1.jpg)
+1.0:（朱家顺）提交初始版本，提供了完备的特征工程建立，和MLPClassifier分类器，效果图：![效果图](./img/initial.png)
+1.1:（张家豪）提交第二个版本，效果图：![效果图](./img/zjh1.jpg)
 1.2:（毛南）提交第三个版本，
 
 对user_log中brand缺失数据进行填充处理
@@ -14,7 +14,7 @@
 
 效果图：
 
-![效果图](../../桌面/yugouWork/img/mn1.jpg)
+![效果图](./img/mn1.jpg)
 
 1.3：(苏沛泽)提交第四个版本，
 
@@ -30,7 +30,7 @@
 
 效果图：
 
-![image-20231124183325080](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20231124183325080.png)
+![image-20231124183325080](./img/spz1.png)
 
 1.4（翟启发）提交第五个版本
 
