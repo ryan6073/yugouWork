@@ -1,6 +1,6 @@
-1.0:（朱家顺）提交初始版本，提供了完备的特征工程建立，和MLPClassifier分类器，效果图：![效果图](./img/initial.png)
-1.1:（张家豪）提交第二个版本，效果图：![效果图](./img/zjh1.jpg)
-1.2:（毛南）提交第三个版本，
+1.0:（朱家顺）提交初始版本，提供了完备的特征工程建立，和MLPClassifier分类器，效果图：![效果图](../yugouWork/img/initial.png)
+1.1:（张家豪）提交第二个版本，效果图：![效果图](../yugouWork/img/zjh1.jpg)
+1.2:（毛南)提交第三个版本，
 
 对user_log中brand缺失数据进行填充处理
 
@@ -14,7 +14,7 @@
 
 效果图：
 
-![效果图](./img/mn1.jpg)
+![效果图](../yugouWork/img/mn1.jpg)
 
 1.3：(苏沛泽)提交第四个版本，
 
@@ -30,16 +30,16 @@
 
 效果图：
 
-![image-20231124183325080](./img/spz1.png)
+![image-20231124183325080](..\yugouWork\img\spz1.png)
 
 1.4（翟启发）提交第五个版本
 
 ​	这段代码通过梯度提升树（Gradient Boosting Tree）进行分类任务，首先训练了模型并进行特征选择，然后利用网格搜索（Grid Search）调整模型参数以提高预测准确率，并最终评估了模型在测试集上的性能。
 
-![zhai1](D:\Gitcode\yugouWork\img\zhai1.png)
+![zhai1](..\yugouWork\img\zhai1.png)
 
-![zhai2](D:\Gitcode\yugouWork\img\zhai2.png)
+![zhai2](..\yugouWork\img\zhai2.png)
 
-![zhai3](D:\Gitcode\yugouWork\img\zhai3.png)
+![zhai3](..\yugouWork\img\zhai3.png)
 
-![zhai4](D:\Gitcode\yugouWork\img\zhai4.png)
+![zhai4](..\yugouWork\img\zhai4.png)
